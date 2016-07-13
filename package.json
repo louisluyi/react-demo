@@ -1,0 +1,22 @@
+{
+	"name": "react-demo",
+	"version": "1.0.0",
+	"description": "react demo building in learning and practice",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@ssh.github.com:louisluyi/react-demo.git"
+	},
+	"keywords": [
+		"react",
+		"webpack"
+	],
+	"author": "louis",
+	"license": "MIT",
+	"dependencies": {
+		"react": "^15.2.1"
+	}
+}

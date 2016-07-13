@@ -1,0 +1,13 @@
+##react 对比 Vue
+1.Vue存储数据没有限制，可以放在你想要的任何地方（可能导致不可预测的变化），而react只能（推荐）放在this.state中（能很好地配合redux）
+2.Vue是通过内容分发(slot)来渲染子元素的，而react是通过this.props.children来渲染，在react中从属关系和父子关系是完全不同的。
+3.Vue和react都有基于props的类型检测，react支持得更加全面，几乎支持所有JavaScript甚至dom类型
+4.Vue在function bind方面做得不错，容易保证所有的method和events的this都默认指向实例本身（尚待验证），react可能需要用（尽量都用）es6的bind
+5.相比Vue，react跟es6结合得非常好，可以运用es6做很多简写和实现复杂的功能（比如解构赋值）
+6.To transform rest and spread properties using Babel 6, you need to install the es2015 preset,
+the transform-object-rest-spread plugin and configure them in the .babelrc file.
+7.Vue和react都默认会在表单元素变化（发生change事件）时更新表单元素的值：
+对于react，如果给表单元素的value指定一个恒定值，比如<input value="1231"/>，那么每次发生change事件以后表单元素的值都会被这个值所取代，而不是用户的输入。
+所以如果想让表单元素的值响应用户的输入，可以不设定value或者使用value={null}，或者设定defaultValue="xxx"，又或者绑定onChange事件主动去更改它的值；
+对于Vue，使用value="xxx"的方式只会让表单元素的值绑定一次，change事件发生后它的值就是用户的输入而不是xxx，而使用v-model="prop"的方式则会使得表单的值在更新的同时
+更新prop的值，prop更新同时也会更新表单元素的值。
